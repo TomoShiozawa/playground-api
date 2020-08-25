@@ -11,6 +11,16 @@ loop do
   name = gets.chomp
   break if name == 'n'
 
+  registered = false
+  @family_names.each do |f|
+    next unless f['name'] == name
+
+    puts 'すでに登録されてます'
+    registered = true
+    break
+  end
+  next if registered
+
   puts 'Enter "Kana" of family name. 苗字の"かな"を入れてください'
   kana = gets.chomp
 
