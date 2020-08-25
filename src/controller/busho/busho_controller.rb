@@ -39,6 +39,7 @@ class BushoController
       temp_family_name = family_name
       temp_given_name_first = given_name
       temp_given_name_second = given_name
+      temp_given_name_second = given_name while temp_given_name_second[:kana] == temp_given_name_first[:kana]
       {
         name: "#{temp_family_name[:name]} #{temp_given_name_first[:name]}#{temp_given_name_second[:name]}",
         name_kana: "#{temp_family_name[:kana]} #{temp_given_name_first[:kana]}#{temp_given_name_second[:kana]}"
