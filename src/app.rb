@@ -8,3 +8,7 @@ require_relative './controllers'
 get '/busho' do
   BushoController.get
 end
+
+get '/yesno' do
+  YesNoController.get
+end
