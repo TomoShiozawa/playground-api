@@ -12,3 +12,7 @@ end
 get '/yesno' do
   YesNoController.get
 end
+
+get '/dice' do
+  DiceController.get
+end
