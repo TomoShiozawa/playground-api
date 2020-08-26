@@ -6,9 +6,7 @@ require 'json'
 class YesNoController
   class << self
     def get
-      {
-        answer: %w[yes no].sample
-      }.to_json
+      { answer: %w[yes no].sample }.to_json
     end
   end
 end
