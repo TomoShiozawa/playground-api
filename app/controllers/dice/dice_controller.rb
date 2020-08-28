@@ -5,6 +5,10 @@ require 'sinatra'
 
 # DiceController
 class DiceController < Sinatra::Base
+  before do
+    content_type :json
+  end
+
   get '/dice' do
     { result: rand(1..6) }.to_json
   end

@@ -17,6 +17,10 @@ class BushoController < Sinatra::Base
     end
   end
 
+  before do
+    content_type :json
+  end
+
   get '/busho' do
     return_name = name
     {
