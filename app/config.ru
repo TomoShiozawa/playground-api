@@ -6,4 +6,5 @@ use BushoController
 use YesNoController
 use PermutationController
 use CombinationController
+use UTCTimeController
 run DiceController
