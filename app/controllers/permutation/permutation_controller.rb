@@ -15,8 +15,7 @@ class PermutationController < Sinatra::Base
     n = permutation.split(/[pP]/)[0].to_i
     r = permutation.split(/[pP]/)[1].to_i
 
-    return { result: 0 }.to_json if n.zero?
-
-    return { result: (1..n).to_a.permutation(r).to_a.length }.to_json
+    permutations = (1..n).to_a.permutation(r).to_a
+    return { num_of_permutations: permutations.length, permutations: permutations }.to_json
   end
 end
